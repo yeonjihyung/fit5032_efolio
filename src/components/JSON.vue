@@ -11,7 +11,13 @@
       <!-- Activity 6: Render a list containing author names and their birth years. Hint: Make use of the v-for directive to iterate through the array of authors. -->
       <!-- TODO: CODE TO RENDER LIST OF AUTHORS HERE -->
       <ul>
-        <li v-for="author in authors" :key="author.id">
+        <!-- eFolio Task 2.2 : highlight George Orwell-->
+        <li
+          v-for="author in authors"
+          :key="author.id"
+          :class="{ highlight: author.name === 'George Orwell' }"
+          :style="{ color: author.name === 'George Orwell' ? 'red' : 'black' }"
+        >
           {{ author.name }} ({{ author.birthYear }})
         </li>
       </ul>
@@ -21,7 +27,13 @@
       <p>Authors born after 1850:</p>
       <!-- TODO: CODE TO RENDER LIST OF AUTHORS HERE -->
       <ul>
-        <li v-for="author in modernAuthors" :key="author.id">
+        <!-- eFolio Task 2.2 : highlight George Orwell-->
+        <li
+          v-for="author in modernAuthors"
+          :key="author.id"
+          :class="{ highlight: author.name === 'George Orwell' }"
+          :style="{ color: author.name === 'George Orwell' ? 'red' : 'black' }"
+        >
           {{ author.name }} ({{ author.birthYear }})
         </li>
       </ul>
@@ -37,7 +49,9 @@
       </ul>
 
       <h3>Finding in Arrays</h3>
-      <p>Finding by property: {{ orwell?.name }}</p>
+      <p>Finding by property:</p>
+      <!-- eFolio Task 2.2 : highlight George Orwell-->
+      <p :class="{ highlight: orwell?.name }" :style="{ color: 'red' }">{{ orwell?.name }}</p>
 
       <h3>Nested Arrays/Objects</h3>
       <p>{{ austen?.name }}'s works:</p>
