@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import MyName from './components/MyName.vue';
 import TheWelcome from './components/TheWelcome.vue'
 </script>
 
@@ -8,6 +9,7 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <MyName msg="Hi, My name is Yeon Ji Hyung." />
       <HelloWorld msg="You did it!" />
     </div>
   </header>
